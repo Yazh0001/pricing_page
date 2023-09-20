@@ -1,0 +1,122 @@
+:root{
+    /* Colors */
+
+    --Cyan: hsl(179, 62%, 43%);
+    --BrightYellow: hsl(71, 73%, 54%);
+    --LightGray: hsl(204, 43%, 93%);
+    --GrayishBlue: hsl(218, 22%, 67%);
+
+    /* Font Weights*/
+
+    --normal: 400;
+    --bold: 700;
+
+    /* Screen sizes */
+
+    --mobile: 375px;
+
+}
+
+
+
+body{
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+
+    background-color: var(--LightGray);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+    grid-template-rows: 9fr 1fr;
+
+    min-height: 100vh;
+    color: var(--GrayishBlue);
+    line-height: 200%;
+}
+
+.card{
+    width: 40em;
+
+    border-radius: .3em;
+    overflow: hidden;
+    background-color: grey;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.104);
+
+}
+
+.join{
+    padding: 2em;
+    background-color: white;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.monthly{
+    color: white;
+    background-color: rgb(43, 179, 177);
+    padding: 2em;
+    font-size: 14px;
+}
+
+.why{
+    color: rgba(255, 255, 255, 0.652);
+    background-color: rgb(74, 190, 189);
+    padding: 2em;
+    padding-right: 8em;
+    font-size: small;
+    line-height: 150%;
+    
+}
+
+.highlight{
+    font-weight: 700;
+    color: var(--BrightYellow);
+    padding-bottom: 1em;
+}
+
+h1{
+    font-size: x-large;
+    color: var(--GrayishBlue);
+}
+
+h2{
+    color: white;
+    font-size: large;
+}
+
+button{
+    margin-top: 2em;
+    width: 100%;
+    padding: 1em;
+    background-color: var(--BrightYellow);
+    border-radius: .3em;
+    border-width: 0px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.153);
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    transition: .2s;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: hsl(71, 73%, 40%);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.29);
+}
+
+@media only screen and (max-width: 700px){
+    .card{
+        grid-template-columns: auto;
+        width: 20em;
+        height: fit-content;
+    }
+
+    .join{
+        grid-column-end: 2;
+        font-size: 14px;
+    }
+}
